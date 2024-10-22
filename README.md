@@ -12,3 +12,8 @@ There are some artifices derived from the practice system in the CQUPT folder.
 
 CQUPT文件夹内是重邮训练系统的题解，记录了一些比较巧妙的做题技巧
 
+以下同学参与了题解编写（首字母排序）：
+
+白启亮 陈越 程靖伟 沈竣宇
+
+
