@@ -1,0 +1,45 @@
+Q2111.(语言: C)编写一C语言程序，从键盘输入10个整数，求出它们中最大的一个数并输出。(请不要使用数组或指针)。
+
+输入要求：每输入一个整数前，要有提示信息"input the number!\n"
+
+输出要求："max integer is %d!\n"
+程序运行示例：input the number!
+18
+input the number!
+2
+input the number!
+6
+input the number!
+0
+input the number!
+8
+input the number!
+15
+input the number!
+23
+input the number!
+57
+input the number!
+65
+input the number!
+45
+max integer is 65!
+
+//解题思路：乍一看连续输入十个数据很麻烦，但其实我们可以通过一个简单的循环来实现：
+//即：先存储int类型的最小负数值-2147483647，之后输入的第一个值，必定比该值大，所以
+//第一个值会被存储，之后的第二个值、第三个值......分别输入程序，通过条件判断存储最大值
+
+#include <stdio.h>  
+int main() 
+{  
+    int m;
+    int max=-2147483648;//int占32位的时候，最大可以赋值为：2147483647
+    for (int i=0;i<10;i++){
+		printf("input the number!\n");//而我们输入的数必定大于-2147483647，因此第一个值会被存储
+		scanf("%d",&m);	
+		if (m>max){
+			max=m;//通过循环一直寻找保留最大值
+		}
+	}
+		printf("max integer is %d!\n",max);
+}
